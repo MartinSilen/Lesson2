@@ -1,35 +1,41 @@
 import java.util.Scanner;
 
 public class Kek {
-    
 
-    
-    public static int calculator() throws Exception {
+    public static float calculator() throws Exception {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter first number");
-        int a = sc.nextInt();
-        sc.nextLine();
-        System.out.println("Enter Operator");
-        String op = sc.nextLine();
-        System.out.println("Enter second number");
-        int b = sc.nextInt();
-        sc.nextLine();
         
-        switch(op){
-            case "+":
-            return a+b;
-            case "-":
-            return a-b;
-            case "*":
-            return a*b;
-            case "/": 
-            return a/b;
-            default:
+       while(true){ System.out.println("Enter first number");
+        float a = sc.nextFloat();
+        sc.nextLine();
+        String op;
+        while(true){System.out.println("Enter Operator");
+        String com = sc.nextLine();
+        if (!com.equals("+") && !com.equals("-") && !com.equals("*") && !com.equals("/")){
             System.out.println("Incorrect Operator!");
-            return -1;
+            continue;
+        } else op = com;
+        break;
         }
-        
+
+        System.out.println("Enter second number");
+        float b = sc.nextFloat();
+        sc.nextLine();
+
+        switch (op) {
+        case "+":
+            return a + b;
+        case "-":
+            return a - b;
+        case "*":
+            return a * b;
+        case "/":
+            return a / b;
+        }
     }
+
+    }
+
     public static void print(String j) {
         System.out.println(j);
     }

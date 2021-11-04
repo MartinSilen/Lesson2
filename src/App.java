@@ -1,17 +1,17 @@
 public class App {
 
     public static void main(String[] args) throws Exception  {
-        boolean con = false;
-        do{
+        
+        while (true){
         try {
                 System.out.println(Kek.calculator());
-            con = true;
+            break;
         }
         catch(Exception e){System.out.println("Invalid Value!");
         continue;
         } 
 
-        }while (con == false);
+        }
         
     }
 }
