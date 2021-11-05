@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Kek {
 
-    public static float calculator() throws Exception {
+    public static double calculator() throws Exception {
         Scanner sc = new Scanner(System.in);
         
        while(true){ System.out.println("Enter first number");
-        float a = sc.nextFloat();
+        double a = sc.nextDouble();
         sc.nextLine();
         String op;
         while(true){System.out.println("Enter Operator");
@@ -19,7 +19,7 @@ public class Kek {
         }
 
         System.out.println("Enter second number");
-        float b = sc.nextFloat();
+        double b = sc.nextDouble();
         sc.nextLine();
 
         switch (op) {
